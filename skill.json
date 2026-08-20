@@ -1,0 +1,38 @@
+{
+  "name": "genpark-approval-first-agent-task-execution-governor-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Human-in-the-loop approval gate for autonomous AI agent task execution with rollback safety.",
+  "author": "genpark",
+  "category": "operations",
+  "tags": [
+    "human-in-the-loop",
+    "approval-gate",
+    "agent-governor",
+    "safe-execution",
+    "soloop"
+  ],
+  "inputs": {
+    "proposed_agent_action": {
+      "type": "object"
+    },
+    "risk_level": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "approval_required": {
+      "type": "boolean"
+    },
+    "risk_assessment": {
+      "type": "string"
+    },
+    "safe_execution_plan": {
+      "type": "array"
+    },
+    "rollback_plan": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
